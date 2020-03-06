@@ -15,10 +15,10 @@ public class ThreadCorrida extends Thread {
 	private String nome = "";
 	private final int fim = 380;
 	private static int colocacao = 0;
-	private PersonagemController controller;
+	private CarroController controller;
 
 	public ThreadCorrida(JLabel lblPerson, JButton btnIniciar, String nome, JTextField txtVencedor, 
-			JTextField txtPerdedor, PersonagemController controller) {
+			JTextField txtPerdedor, CarroController controller) {
 		this.lblPerson = lblPerson;
 		this.btnIniciar = btnIniciar;
 		this.txtVencedor = txtVencedor;

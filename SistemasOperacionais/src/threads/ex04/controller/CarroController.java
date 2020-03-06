@@ -7,14 +7,14 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
-public class PersonagemController implements ActionListener {
+public class CarroController implements ActionListener {
 	private JLabel lblPerson1;
 	private JLabel lblPerson2;
 	private JButton btnIniciar;
 	private JTextField txtVencedor;
 	private JTextField txtPerdedor;
 
-	public PersonagemController(JLabel lblPerson1, JLabel lblPerson2, JButton btnIniciar, JTextField txtVencedor, JTextField txtPerdedor) {
+	public CarroController(JLabel lblPerson1, JLabel lblPerson2, JButton btnIniciar, JTextField txtVencedor, JTextField txtPerdedor) {
 		this.lblPerson1 = lblPerson1;
 		this.lblPerson2 = lblPerson2;
 		this.btnIniciar = btnIniciar;

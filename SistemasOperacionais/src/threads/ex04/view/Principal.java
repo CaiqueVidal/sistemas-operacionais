@@ -7,7 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import threads.ex04.controller.PersonagemController;
+import threads.ex04.controller.CarroController;
 
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
@@ -83,7 +83,7 @@ public class Principal extends JFrame {
 		btnIniciar.setBounds(314, 11, 89, 23);
 		contentPane.add(btnIniciar);
 		
-		PersonagemController personagemController = new PersonagemController(lblPerson1, lblPerson2, btnIniciar, txtVencedor, txtPerdedor);
+		CarroController personagemController = new CarroController(lblPerson1, lblPerson2, btnIniciar, txtVencedor, txtPerdedor);
 		btnIniciar.addActionListener(personagemController);
 		
 		

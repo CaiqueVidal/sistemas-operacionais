@@ -8,34 +8,34 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 public class CarroController implements ActionListener {
-	private JLabel lblPerson1;
-	private JLabel lblPerson2;
+	private JLabel lblCarro1;
+	private JLabel lblCarro2;
 	private JButton btnIniciar;
 	private JTextField txtVencedor;
 	private JTextField txtPerdedor;
 
-	public CarroController(JLabel lblPerson1, JLabel lblPerson2, JButton btnIniciar, JTextField txtVencedor, JTextField txtPerdedor) {
-		this.lblPerson1 = lblPerson1;
-		this.lblPerson2 = lblPerson2;
+	public CarroController(JLabel lblCarro1, JLabel lblCarro2, JButton btnIniciar, JTextField txtVencedor, JTextField txtPerdedor) {
+		this.lblCarro1 = lblCarro1;
+		this.lblCarro2 = lblCarro2;
 		this.btnIniciar = btnIniciar;
 		this.txtVencedor = txtVencedor;
 		this.txtPerdedor = txtPerdedor;
 	}
 
-	private void gerarPersonagem() {
-		Thread t1 = new ThreadCorrida(lblPerson1, btnIniciar, "Carro1", txtVencedor, txtPerdedor, this);
-		Thread t2 = new ThreadCorrida(lblPerson2, btnIniciar, "Carro2", txtVencedor, txtPerdedor, this);
+	private void gerarCarro() {
+		Thread t1 = new ThreadCorrida(lblCarro1, btnIniciar, "Carro1", txtVencedor, txtPerdedor, this);
+		Thread t2 = new ThreadCorrida(lblCarro2, btnIniciar, "Carro2", txtVencedor, txtPerdedor, this);
 		t1.start();
 		t2.start();
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		gerarPersonagem();
+		gerarCarro();
 	}
 	
 	public void retornarPosicao() {
-		lblPerson1.setBounds(10, 53, 55, 55);
-		lblPerson2.setBounds(10, 130, 55, 55);
+		lblCarro1.setBounds(10, 53, 55, 55);
+		lblCarro2.setBounds(10, 130, 55, 55);
 	}
 }

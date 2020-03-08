@@ -8,7 +8,7 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 public class ThreadCorrida extends Thread {
-	private JLabel lblPerson;
+	private JLabel lblCarro;
 	private JButton btnIniciar;
 	private JTextField txtVencedor;
 	private JTextField txtPerdedor;
@@ -17,9 +17,9 @@ public class ThreadCorrida extends Thread {
 	private static int colocacao = 0;
 	private CarroController controller;
 
-	public ThreadCorrida(JLabel lblPerson, JButton btnIniciar, String nome, JTextField txtVencedor, 
+	public ThreadCorrida(JLabel lblCarro, JButton btnIniciar, String nome, JTextField txtVencedor, 
 			JTextField txtPerdedor, CarroController controller) {
-		this.lblPerson = lblPerson;
+		this.lblCarro = lblCarro;
 		this.btnIniciar = btnIniciar;
 		this.txtVencedor = txtVencedor;
 		this.txtPerdedor = txtPerdedor;
@@ -33,7 +33,7 @@ public class ThreadCorrida extends Thread {
 		txtPerdedor.setText("");
 		
 		Rectangle posicao;
-		posicao = lblPerson.getBounds();
+		posicao = lblCarro.getBounds();
 		Random random = new Random();
 		int numero = 0;
 		int contador = 0;
@@ -42,7 +42,7 @@ public class ThreadCorrida extends Thread {
 			numero = random.nextInt(6)*2;
 			posicao.x += numero; 
 			
-			lblPerson.setBounds(posicao);
+			lblCarro.setBounds(posicao);
 			try {
 				Thread.sleep(100);
 			} catch (InterruptedException ex) {

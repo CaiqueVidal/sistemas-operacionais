@@ -45,17 +45,17 @@ public class Principal extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblPerson1 = new JLabel("P1");
-		lblPerson1.setIcon(new ImageIcon("C:\\Users\\caiqu\\Desktop\\Caique\\3 Imagens\\teste\\tb2.jpg"));
-		lblPerson1.setForeground(Color.RED);
-		lblPerson1.setBounds(10, 53, 55, 55);
-		contentPane.add(lblPerson1);
+		JLabel lblCarro1 = new JLabel("P1");
+		lblCarro1.setIcon(new ImageIcon("C:\\Users\\caiqu\\Desktop\\Caique\\3 Imagens\\teste\\tb2.jpg"));
+		lblCarro1.setForeground(Color.RED);
+		lblCarro1.setBounds(10, 53, 55, 55);
+		contentPane.add(lblCarro1);
 		
-		JLabel lblPerson2 = new JLabel("P2");
-		lblPerson2.setIcon(new ImageIcon("C:\\Users\\caiqu\\Desktop\\Caique\\3 Imagens\\teste\\ty2.jpg"));
-		lblPerson2.setForeground(Color.BLUE);
-		lblPerson2.setBounds(10, 130, 55, 55);
-		contentPane.add(lblPerson2);
+		JLabel lblCarro2 = new JLabel("P2");
+		lblCarro2.setIcon(new ImageIcon("C:\\Users\\caiqu\\Desktop\\Caique\\3 Imagens\\teste\\ty2.jpg"));
+		lblCarro2.setForeground(Color.BLUE);
+		lblCarro2.setBounds(10, 130, 55, 55);
+		contentPane.add(lblCarro2);
 		
 		JLabel lblNewLabel = new JLabel("Vencedor");
 		lblNewLabel.setBounds(10, 214, 55, 14);
@@ -83,10 +83,8 @@ public class Principal extends JFrame {
 		btnIniciar.setBounds(314, 11, 89, 23);
 		contentPane.add(btnIniciar);
 		
-		CarroController personagemController = new CarroController(lblPerson1, lblPerson2, btnIniciar, txtVencedor, txtPerdedor);
-		btnIniciar.addActionListener(personagemController);
-		
-		
+		CarroController personagemController = new CarroController(lblCarro1, lblCarro2, btnIniciar, txtVencedor, txtPerdedor);
+		btnIniciar.addActionListener(personagemController);		
 		
 	}
 }

@@ -6,7 +6,8 @@ import javax.swing.JButton;
 import javax.swing.JTextField;
 
 public class ThreadJogo extends Thread {
-
+	
+	private static int contador;
 	private JButton btnJogar;
 	private JTextField txt;
 	
@@ -31,8 +32,12 @@ public class ThreadJogo extends Thread {
 			int numero = random.nextInt(7)+1;
 			txt.setText(Integer.toString((numero)));
 		}
+		contador ++;
+		if(contador > 2) {
+			btnJogar.setVisible(true);
+			contador = 0;
+		}
 		
-		btnJogar.setVisible(true);
 	}
 	
 	@Override

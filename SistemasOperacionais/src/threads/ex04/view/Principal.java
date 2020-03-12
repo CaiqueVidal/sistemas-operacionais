@@ -46,13 +46,13 @@ public class Principal extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblCarro1 = new JLabel("P1");
-		lblCarro1.setIcon(new ImageIcon("C:\\Users\\caiqu\\Desktop\\Caique\\3 Imagens\\teste\\tb2.jpg"));
+		lblCarro1.setIcon(new ImageIcon(Principal.class.getResource("/threads/ex04/img/blueC.jpg")));
 		lblCarro1.setForeground(Color.RED);
 		lblCarro1.setBounds(10, 53, 55, 55);
 		contentPane.add(lblCarro1);
 		
 		JLabel lblCarro2 = new JLabel("P2");
-		lblCarro2.setIcon(new ImageIcon("C:\\Users\\caiqu\\Desktop\\Caique\\3 Imagens\\teste\\ty2.jpg"));
+		lblCarro2.setIcon(new ImageIcon(Principal.class.getResource("/threads/ex04/img/yellowC.jpg")));
 		lblCarro2.setForeground(Color.BLUE);
 		lblCarro2.setBounds(10, 130, 55, 55);
 		contentPane.add(lblCarro2);

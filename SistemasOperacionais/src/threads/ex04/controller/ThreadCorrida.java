@@ -15,16 +15,16 @@ public class ThreadCorrida extends Thread {
 	private String nome = "";
 	private final int fim = 380;
 	private static int colocacao = 0;
-	private CarroController controller;
+	private CarroController carroController;
 
 	public ThreadCorrida(JLabel lblCarro, JButton btnIniciar, String nome, JTextField txtVencedor, 
-			JTextField txtPerdedor, CarroController controller) {
+			JTextField txtPerdedor, CarroController carroController) {
 		this.lblCarro = lblCarro;
 		this.btnIniciar = btnIniciar;
 		this.txtVencedor = txtVencedor;
 		this.txtPerdedor = txtPerdedor;
 		this.nome = nome;
-		this.controller = controller;
+		this.carroController = carroController;
 	}
 
 	private void moverPersonagem() {
@@ -60,7 +60,7 @@ public class ThreadCorrida extends Thread {
 			txtPerdedor.setText(nome);
 			btnIniciar.setVisible(true);
 			colocacao = 0;
-			controller.retornarPosicao();
+			carroController.retornarPosicao();
 		}
 		
 		
